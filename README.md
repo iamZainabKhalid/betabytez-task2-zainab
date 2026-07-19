@@ -1,16 +1,59 @@
-# React + Vite
+# BetaBytez Task 2 — Dynamic Portfolio with React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📋 About This Project
+A dynamic, component-based portfolio website built with React.js as part of the BetaBytez Summer Internship 2026 (Web Development Track — Task 2). This rebuilds and expands my Task 1 static portfolio using React Router, hooks, and live API integration.
 
-Currently, two official plugins are available:
+## 🛠️ Technologies Used
+- React.js (functional components + hooks)
+- React Router DOM (client-side routing)
+- GitHub REST API (public profile data)
+- Plain CSS (custom properties, responsive design)
+- Vite (build tool)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- 7 reusable React components: Navbar, Hero, About, Skills, Projects, Contact, Footer
+- Client-side routing with dynamic project detail pages (`/projects/:id`)
+- Light/Dark mode toggle using `useState`
+- Live GitHub profile stats fetched via `useEffect` and the GitHub public API
+- Project filtering by category (All / Web / AI / Other) using `useState`
+- All project and skill data centralized in `data.js`, passed via props
+- Fully responsive design
 
-## React Compiler
+## 🧩 Component Structure
+src/
+├── components/
+│   ├── Navbar.jsx       — navigation + theme toggle
+│   ├── Hero.jsx         — landing section
+│   ├── About.jsx        — bio + GitHub API integration
+│   ├── Skills.jsx       — skills list (props from data.js)
+│   ├── Projects.jsx     — filterable project list (props from data.js)
+│   ├── ProjectDetail.jsx— individual project page (React Router)
+│   ├── Contact.jsx      — contact form with validation
+│   └── Footer.jsx
+├── data.js               — centralized skills & projects data
+├── App.jsx                — routes + global state (dark mode)
+└── main.jsx                — app entry point, BrowserRouter
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 How to Run Locally
+1. Clone this repository:
+git clone https://github.com/iamZainabKhalid/betabytez-task2-zainab.git
+2. Navigate into the folder:
+cd betabytez-task2-zainab
+3. Install dependencies:
+npm install
+4. Start the development server:
+npm run dev
+5. Open the local URL shown in the terminal (usually `http://localhost:5173`).
 
-## Expanding the ESLint configuration
+## 📸 Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Light Mode
+![Light Mode](screenshots/light-mode.png)
+
+### Dark Mode
+![Dark Mode](screenshots/dark-mode.png)
+
+## 📌 Note
+This project was built as part of the BetaBytez Summer Internship 2026.
+
+
